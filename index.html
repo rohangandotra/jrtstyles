@@ -63,7 +63,9 @@
   html[data-v="bold"] .hero-photo,html[data-v="boldgrey"] .hero-photo{display:block}
   @media(max-width:820px){
     html[data-v="bold"] header,html[data-v="boldgrey"] header{grid-template-columns:clamp(2.5rem,7vw,5.5rem) 1fr}
-    html[data-v="bold"] .hero-photo,html[data-v="boldgrey"] .hero-photo{grid-column:2;height:70vw}
+    html[data-v="bold"] .hero-photo,html[data-v="boldgrey"] .hero-photo{grid-column:1/-1;height:auto;aspect-ratio:3/4}
+    html[data-v="bold"] .hero-photo::after,html[data-v="boldgrey"] .hero-photo::after{background:linear-gradient(180deg,var(--ground) 0%,transparent 14%)}
+    html[data-v="bold"] .hero-photo img,html[data-v="boldgrey"] .hero-photo img{object-position:center center}
     html[data-v="bold"] .hero-inner,html[data-v="boldgrey"] .hero-inner{padding-bottom:2.5rem}
   }
 
